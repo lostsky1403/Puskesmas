@@ -21,8 +21,14 @@
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="pasien">
+      <a class="nav-link" href="/pasien">
         <span class="menu-title">Pasien</span>
+        <i class="mdi mdi-home menu-icon"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/dokter">
+        <span class="menu-title">Dokter</span>
         <i class="mdi mdi-home menu-icon"></i>
       </a>
     </li>
