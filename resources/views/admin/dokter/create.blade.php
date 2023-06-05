@@ -29,7 +29,7 @@
 
                     <div class="form-group mt-3">
                         <label for="ahli">Ahli</label>
-                        <input type="date" class="form-control" name="ahli" value="">
+                        <input type="text" class="form-control" name="ahli" value="">
                     </div>
 
                     <div class="form-group mt-3">
