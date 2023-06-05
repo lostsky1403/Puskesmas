@@ -6,10 +6,11 @@ use App\Models\Pasien;
 use Illuminate\Http\Request;
 
 class PasienController extends Controller
+    //method untuk menampilkan semua data pasien
 {
     public function index()
     {
-        $pasiens = Pasien::getALL();
+        $pasiens = Pasien::all();
 
         return view('admin.pasien.index', [
 
@@ -26,7 +27,18 @@ class PasienController extends Controller
 
     public function store(Request $request)
     {
-        dd($request->all());
+        //insert ke table pasiens
+        Pasien::create(
+            [
+                'nama' => $request->nama,
+                'jk' => $request->jk,
+                'tgl_lahir' => $request->tgl_lahir,
+                'alamat' => $request->alamat,
+                'telp' => $request->telp,
+
+            ]
+        );
+        return redirect('/pasien');
     }
 
 
