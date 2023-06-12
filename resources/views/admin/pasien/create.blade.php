@@ -13,9 +13,9 @@
                     <div class="alert alert-danger">
                         <strong>Whoops!</strong> Ada kesalahan input data! <br><br>
                         <ul>
-                            {{-- @foreach ($errors->all() as $error)
+                            @foreach ($errors->all() as $error)
                                 <li>{{ $error }} </li>
-                            @endforeach --}}
+                            @endforeach
                         </ul>
                     </div>
                 @endif

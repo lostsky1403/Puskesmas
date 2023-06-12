@@ -27,6 +27,17 @@ class DokterController extends Controller
 
     public function store(Request $request)
     {
+
+        //melakukan validasi data
+
+        $request->validate([
+            'nama' => 'required',
+            'ahli' => 'required',
+            'alamat' => 'required',
+            'telp' => 'required',
+        ]);
+
+
         //insert ke table dokters
         dokter::create(
             [

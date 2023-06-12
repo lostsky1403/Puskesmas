@@ -44,3 +44,12 @@ Route::post('/pasien', [PasienController::class, 'store']);
 Route::get('/dokter', [DokterController::class, 'index']);
 Route::get('/dokter/create', [DokterController::class, 'create']);
 Route::post('/dokter', [DokterController::class, 'store']);
+
+//route untuk menampilkan form edit pasien
+route::get('/pasien/edit/{id}', [PasienController::class, 'edit']);
+
+//route untuk memproses edit pasien
+route::put('/pasien/{id}', [PasienController::class, 'update']);
+
+//route untuk menghapus pasien
+Route::delete('/pasien', [PasienController::class, 'destroy']);
