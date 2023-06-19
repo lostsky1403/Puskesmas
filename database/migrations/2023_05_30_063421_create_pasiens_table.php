@@ -17,6 +17,7 @@ return new class extends Migration {
             $table->date('tgl_lahir');
             $table->text('alamat');
             $table->string('telp');
+            $table->foreignId('dokter_id');
             $table->timestamps();
         });
     }

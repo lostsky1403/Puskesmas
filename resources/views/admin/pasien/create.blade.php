@@ -1,6 +1,6 @@
 @extends('main')
 @section('content')
-    
+
 
     <div class="container">
         <h1 class="text-center">Tambah Pasien</h1>
@@ -24,7 +24,8 @@
                     <div class="form-group mt-3">
                         @csrf
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Pasien" value="">
+                        <input type="text" class="form-control" name="nama" placeholder="Masukkan Nama Pasien"
+                            value="">
                     </div>
 
                     <div class="form-group mt-3">
@@ -47,7 +48,17 @@
 
                     <div class="form-group mt-3">
                         <label for="telp">No. Telp</label>
-                        <input type="text" class="form-control" name="telp" placeholder="Masukkan No. Telp" value="">
+                        <input type="text" class="form-control" name="telp" placeholder="Masukkan No. Telp"
+                            value="">
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <label for="dokter_id">Dokter</label>
+                        <select name="dokter_id" id="dokter_id" class="form-select">
+                            @foreach ($dokters as $dokter)
+                                <option value="{{ $dokter->id }}">{{ $dokter->nama }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="form-group mt-3 d-flex justify-content-center">
@@ -55,4 +66,4 @@
                     </div>
                 </form>
 
-                @endsection
+            @endsection
